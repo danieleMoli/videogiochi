@@ -8,19 +8,19 @@
 
 
 <div *ngIf="results">
-  <div *ngIf="!results || results.length ==0">
+  <div *ngIf="!results.results || results.results.length ==0">
     No tracks were found with the term '{{ query }}'
   </div>
 
-  <div *ngIf="results &&  results.length > 0">
+  <div *ngIf="results.results &&  results.results.length > 0">
   <h1>Results</h1>
     <div class="row">
-      <div class="col-sm-6 col-md-4" *ngFor="let t of results">
+      <div class="col-sm-6 col-md-4" *ngFor="let t of results.results">
 
         <div class="thumbnail">
 
           <div class="content">
-            <img src="{{ t.image_url }}" class="img-responsive">
+            <img src="{{ t.background_image }}" class="img-responsive">
 
 
 
